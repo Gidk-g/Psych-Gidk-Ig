@@ -137,6 +137,7 @@ class PlayState extends MusicBeatState
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
+
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
 	public static var SONG:SwagSong = null;
@@ -162,6 +163,7 @@ class PlayState extends MusicBeatState
 	//Handles the new epic mega sexy cam code that i've done
 	public var camFollow:FlxPoint;
 	public var camFollowPos:FlxObject;
+
 	private static var prevCamFollow:FlxPoint;
 	private static var prevCamFollowPos:FlxObject;
 
@@ -192,7 +194,9 @@ class PlayState extends MusicBeatState
 	private var generatedMusic:Bool = false;
 	public var endingSong:Bool = false;
 	public var startingSong:Bool = false;
+
 	private var updateTime:Bool = true;
+
 	public static var changedDifficulty:Bool = false;
 	public static var chartingMode:Bool = false;
 
@@ -261,6 +265,7 @@ class PlayState extends MusicBeatState
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
+
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
@@ -273,10 +278,12 @@ class PlayState extends MusicBeatState
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
+
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
 
 	public var inCutscene:Bool = false;
 	public var skipCountdown:Bool = false;
+
 	var songLength:Float = 0;
 
 	public var boyfriendCameraOffset:Array<Float> = null;
@@ -298,9 +305,11 @@ class PlayState extends MusicBeatState
 	// Lua shit
 	public static var instance:PlayState;
 	public var luaArray:Array<FunkinLua> = [];
+
 	#if LUA_ALLOWED
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	#end
+
 	public var introSoundsSuffix:String = '';
 
 	// Debug buttons
@@ -315,8 +324,10 @@ class PlayState extends MusicBeatState
 	
 	// stores the last judgement object
 	public static var lastRating:FlxSprite;
+
 	// stores the last combo sprite object
 	public static var lastCombo:FlxSprite;
+
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
 
