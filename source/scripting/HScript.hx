@@ -81,6 +81,8 @@ class HScript
 		@:privateAccess
 		HScript.parser.line = 1;
 		HScript.parser.allowTypes = true;
+		HScript.parser.allowJSON = true;
+		HScript.parser.allowMetadata = true;
 		return interp.execute(HScript.parser.parseString(codeToRun));
 	}
 	#end
