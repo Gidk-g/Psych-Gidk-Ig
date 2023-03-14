@@ -1,7 +1,3 @@
-
-#if desktop
-import backend.Discord;
-#end
 import backend.MusicBeatState;
 import backend.MusicBeatSubstate;
 import backend.CustomFadeTransition;
@@ -26,5 +22,9 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.group.FlxSpriteGroup;
 import flixel.group.FlxGroup.FlxTypedGroup;
+
+#if desktop
+import backend.Discord;
+#end
 
 using StringTools;
