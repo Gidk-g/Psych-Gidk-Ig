@@ -1,4 +1,4 @@
-package psychlua;
+package scripting.lua;
 
 #if LUA_ALLOWED
 import llua.Lua;

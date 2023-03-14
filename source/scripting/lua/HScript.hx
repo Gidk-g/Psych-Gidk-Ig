@@ -1,4 +1,4 @@
-package psychlua;
+package scripting.lua;
 
 #if hscript
 import hscript.Parser;
@@ -48,7 +48,7 @@ class HScript
 		interp.variables.set('ClientPrefs', ClientPrefs);
 		interp.variables.set('Character', Character);
 		interp.variables.set('Alphabet', Alphabet);
-		interp.variables.set('CustomSubstate', psychlua.CustomSubstate);
+		interp.variables.set('CustomSubstate', scripting.lua.CustomSubstate);
 		#if (!flash && sys)
 		interp.variables.set('FlxRuntimeShader', flixel.addons.display.FlxRuntimeShader);
 		#end

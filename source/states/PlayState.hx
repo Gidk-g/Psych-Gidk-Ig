@@ -27,7 +27,7 @@ import openfl.utils.Assets as OpenFlAssets;
 import openfl.events.KeyboardEvent;
 import haxe.Json;
 
-import psychlua.FunkinLua;
+import scripting.lua.FunkinLua;
 
 import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
@@ -52,7 +52,13 @@ import sys.io.File;
 #end
 
 #if VIDEOS_ALLOWED
-import vlc.MP4Handler;
+#if (hxCodec >= "2.6.1") 
+import hxcodec.VideoHandler as MP4Handler;
+#elseif (hxCodec == "2.6.0") 
+import VideoHandler as MP4Handler;
+#else 
+import vlc.MP4Handler; 
+#end
 #end
 
 import objects.Note.EventNote;
@@ -60,9 +66,9 @@ import objects.*;
 import states.stages.objects.*;
 
 #if LUA_ALLOWED
-import psychlua.*;
+import scripting.lua.*;
 #else
-import psychlua.LuaUtils;
+import scripting.lua.LuaUtils;
 #end
 
 class PlayState extends MusicBeatState

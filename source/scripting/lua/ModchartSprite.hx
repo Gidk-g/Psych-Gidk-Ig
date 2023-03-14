@@ -1,4 +1,4 @@
-package psychlua;
+package scripting.lua;
 
 class ModchartSprite extends FlxSprite
 {
