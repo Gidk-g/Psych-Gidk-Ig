@@ -27,7 +27,7 @@ import openfl.utils.Assets as OpenFlAssets;
 import openfl.events.KeyboardEvent;
 import haxe.Json;
 
-import scripting.lua.FunkinLua;
+import scripting.FunkinLua;
 
 import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
@@ -66,9 +66,9 @@ import objects.*;
 import states.stages.objects.*;
 
 #if LUA_ALLOWED
-import scripting.lua.*;
+import scripting.*;
 #else
-import scripting.lua.LuaUtils;
+import scripting.LuaUtils;
 #end
 
 class PlayState extends MusicBeatState

@@ -1,4 +1,4 @@
-package scripting.lua;
+package scripting;
 
 #if LUA_ALLOWED
 import llua.Lua;

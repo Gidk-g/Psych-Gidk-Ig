@@ -1,4 +1,4 @@
-package scripting.lua;
+package scripting;
 
 import backend.WeekData;
 import backend.Highscore;
@@ -41,12 +41,12 @@ import states.FreeplayState;
 import substates.PauseSubState;
 import substates.GameOverSubstate;
 
-import scripting.lua.LuaUtils;
-import scripting.lua.LuaUtils.LuaTweenOptions;
-import scripting.lua.HScript;
-import scripting.lua.DebugLuaText;
-import scripting.lua.ModchartSprite;
-import scripting.lua.ModchartText;
+import scripting.LuaUtils;
+import scripting.LuaUtils.LuaTweenOptions;
+import scripting.HScript;
+import scripting.DebugLuaText;
+import scripting.ModchartSprite;
+import scripting.ModchartText;
 
 class FunkinLua {
 	public static var Function_Stop:Dynamic = "##PSYCHLUA_FUNCTIONSTOP";
@@ -2327,8 +2327,8 @@ class FunkinLua {
 				PlayState.instance.modchartTexts.remove(tag);
 			}
 		});
-		scripting.lua.DeprecatedFunctions.implement(this);
-		scripting.lua.ExtraFunctions.implement(this);
+		scripting.DeprecatedFunctions.implement(this);
+		scripting.ExtraFunctions.implement(this);
 
 		call('onCreate', []);
 		#end

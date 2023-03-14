@@ -1,4 +1,4 @@
-package scripting.lua;
+package scripting;
 
 class CustomSubstate extends MusicBeatSubstate
 {
